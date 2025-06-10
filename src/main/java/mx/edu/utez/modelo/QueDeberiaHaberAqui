@@ -1,0 +1,6 @@
+Los modelos:
+Cita.java
+Persona --> Medico, Paciente
+Receta.java
+Consultorio.java
+EquipoMedico.java
