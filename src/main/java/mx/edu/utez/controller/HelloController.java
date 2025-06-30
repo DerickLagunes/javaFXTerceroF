@@ -53,6 +53,8 @@ public class HelloController {
             JOptionPane.showMessageDialog(null, "Bienvenido al sistema");
             // Cambiar de escenario
             try{
+                login.setDisable(true);
+                registro.setDisable(true);
                 // 1. Obtener el padre o la escena nueva
                 Parent root = FXMLLoader.load(getClass().getResource("index.fxml"));
                 // 2. Obtener el stage que ya existia
@@ -65,6 +67,8 @@ public class HelloController {
                 stage.show();
             }catch (Exception e){
                 System.out.println("Error algo paso cargando la escena");
+                login.setDisable(false);
+                registro.setDisable(false);
             }
         }else{
             //No existe en BD y no continua

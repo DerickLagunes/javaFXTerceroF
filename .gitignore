@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+##Propio##
+/src/main/resources/mx/edu/utez/controller/connection/
