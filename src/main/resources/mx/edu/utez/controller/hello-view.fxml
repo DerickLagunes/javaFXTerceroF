@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.utez.controller.HelloController">
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.utez.controller.HelloController">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #f5db93;" BorderPane.alignment="CENTER">
          <children>
@@ -46,6 +46,7 @@
             </Label>
             <Button fx:id="login" layoutX="115.0" layoutY="267.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: green;" text="Iniciar sesión" textFill="WHITE" />
             <Button fx:id="registro" layoutX="123.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Registrate" textFill="WHITE" />
+            <ProgressIndicator fx:id="spinner" maxHeight="100" maxWidth="100" visible="false" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="100.0" />
             <Label fx:id="idLabel" layoutX="52.0" layoutY="67.0" text="Bienvenido al SISA">
                <font>
                   <Font name="System Bold" size="24.0" />

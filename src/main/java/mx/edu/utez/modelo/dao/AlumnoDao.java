@@ -96,7 +96,37 @@ public class AlumnoDao {
         return false;
     }
 
+    //Función de Delete Fisico
+    public boolean deleteAlumno(int id){
+        try {
+            Connection conn = OracleDatabaseConnectionManager.getConnection();
+            String query = "DELETE FROM alumno WHERE id=?"; // <-- NO OLVIDAR EL WHERE
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1,id);
+            if(ps.executeUpdate()>0){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 
+    //Función de Delete Logico
+    public boolean deleteLAlumno(int id){
+        try {
+            Connection conn = OracleDatabaseConnectionManager.getConnection();
+            String query = "UPDATE alumno SET status = 0 WHERE id=?"; // <-- NO OLVIDAR EL WHERE
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1,id);
+            if(ps.executeUpdate()>0){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 
 
